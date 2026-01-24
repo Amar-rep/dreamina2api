@@ -5,7 +5,7 @@ WORKDIR /app
 
 # Install dependencies
 COPY package*.json ./
-RUN npm ci --only=production
+RUN npm ci
 
 # Copy source files
 COPY . .
@@ -18,21 +18,12 @@ FROM node:18-alpine AS production
 
 WORKDIR /app
 
-# Create non-root user
-RUN addgroup -g 1001 -S dreamina && \
-    adduser -S dreamina -u 1001
-
 # Copy built files and dependencies
 COPY --from=builder /app/dist ./dist
 COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/package*.json ./
 COPY --from=builder /app/configs ./configs
 COPY --from=builder /app/public ./public
-
-# Set ownership
-RUN chown -R dreamina:dreamina /app
-
-USER dreamina
 
 # Expose port
 EXPOSE 5200
