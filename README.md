@@ -12,7 +12,7 @@ Dreamina (CapCut) 图像生成 API 服务。
 
 | 模型名称 | API Key |
 |---------|---------|
-| Image 4.5 | `dreamina-4.5` |
+| Image 4.5 | `dreamina-4.5` (默认) |
 | Image 4.1 | `dreamina-4.1` |
 | Image 4.0 | `dreamina-4.0` |
 
@@ -28,9 +28,22 @@ npm install
 
 ## 运行
 
+### 本地运行
+
 ```bash
 npm run build
 npm start
+```
+
+### Docker 运行
+
+```bash
+# docker-compose (推荐)
+docker-compose up -d
+
+# 或手动构建
+docker build -t dreamina-api .
+docker run -d -p 5200:5200 --name dreamina-api dreamina-api
 ```
 
 服务默认在 `http://localhost:5200` 启动。
@@ -49,6 +62,16 @@ curl -X POST http://localhost:5200/v1/images/generations \
     "ratio": "16:9"
   }'
 ```
+
+### 参数说明
+
+| 参数 | 必填 | 说明 |
+|-----|-----|------|
+| `prompt` | ✅ | 图片描述 |
+| `model` | ❌ | 模型名称，默认 `dreamina-4.5` |
+| `ratio` | ❌ | 图片比例，默认 `1:1` |
+| `negative_prompt` | ❌ | 负向提示词 |
+| `sample_strength` | ❌ | 精细度 (0-1) |
 
 ### 获取历史
 
