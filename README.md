@@ -20,6 +20,14 @@ Dreamina (CapCut) 图像生成 API 服务。
 
 - `1:1`, `4:3`, `3:4`, `16:9`, `9:16`, `3:2`, `2:3`, `21:9`
 
+## 获取 Session ID
+
+1. 访问 Dreamina 官网: https://dreamina.capcut.com/ai-tool/home
+2. 登录账号
+3. 按 F12 打开浏览器开发者工具
+4. 切换到 Application (应用) 标签 → Cookies
+5. 找到 `sessionid` 字段，复制其值
+
 ## 安装
 
 ```bash
