@@ -105,6 +105,10 @@ python3 generate_image.py --prompt "画一个苹果" --token "YOUR_SESSION_ID" -
 |-----|------|-------|
 | `PORT` | 服务端口 | `5200` |
 
+## 致谢
+
+本项目基于 [jimeng-api](https://github.com/iptag/jimeng-api) 修改而来，感谢原作者的贡献。
+
 ## License
 
 MIT
